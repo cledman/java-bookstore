@@ -1,3 +1,7 @@
+package br.com.casadocodigo.livraria.teste;
+import br.com.casadocodigo.livraria.Autor;
+import br.com.casadocodigo.livraria.produtos.Ebook;
+import br.com.casadocodigo.livraria.produtos.LivroFisico;
 
 public class RegistroDeVendas {
 	public static void main(String[] args) {
@@ -18,5 +22,9 @@ public class RegistroDeVendas {
 		carrinho.adiciona(ebook);
 		
 		System.out.println("Total: " + carrinho.getTotal());
+		
+		if (fisico.aplicaDescontoDe10Porcento()) {
+			System.out.println("Valor agora é " + fisico.getValor());
+		}
 	}
 }

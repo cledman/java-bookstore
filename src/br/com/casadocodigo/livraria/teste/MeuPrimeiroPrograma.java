@@ -1,3 +1,4 @@
+package br.com.casadocodigo.livraria.teste;
 
 public class MeuPrimeiroPrograma {
 	public static void main(String[] args) {

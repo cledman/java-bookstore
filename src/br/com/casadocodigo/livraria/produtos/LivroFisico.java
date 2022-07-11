@@ -1,5 +1,7 @@
+package br.com.casadocodigo.livraria.produtos;
+import br.com.casadocodigo.livraria.Autor;
 
-public class LivroFisico extends Livro{
+public class LivroFisico extends Livro implements Promocional{
 
 	public LivroFisico(Autor autor) {
 		super(autor);

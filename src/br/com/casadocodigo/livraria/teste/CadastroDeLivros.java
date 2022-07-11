@@ -1,7 +1,11 @@
+package br.com.casadocodigo.livraria.teste;
+import br.com.casadocodigo.livraria.Autor;
+import br.com.casadocodigo.livraria.produtos.Livro;
+import br.com.casadocodigo.livraria.produtos.LivroFisico;
 
 public class CadastroDeLivros {
 	public static void main(String[] args) {
-		// paramos na 79
+		
 		Autor autor = new Autor();
 		autor.setNome("Rodrigo Turini");
 		autor.setEmail("rodrigo.turini@caelum.com.br");

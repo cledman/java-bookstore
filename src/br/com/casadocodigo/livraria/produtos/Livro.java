@@ -1,5 +1,7 @@
+package br.com.casadocodigo.livraria.produtos;
+import br.com.casadocodigo.livraria.Autor;
 
-public abstract class Livro {
+public abstract class Livro implements Produto{
 	
 	private String nome;
 	private String descricao;
@@ -14,7 +16,7 @@ public abstract class Livro {
 		this.isbn = "000-00-00000-00-0";		
 	}
 	
-	void mostrarDetalhes() {
+	public void mostrarDetalhes() {
 		
 		System.out.println("Mostrando detalhes do livro ");
 		System.out.println("Nome: " + nome);
@@ -28,8 +30,7 @@ public abstract class Livro {
 			autor.mostrarDetalhes();
 		}
 	}
-	
-	public abstract boolean aplicaDescontoDe(double porcentagem);
+
 	
 	public String getNome() {
 		return nome;
