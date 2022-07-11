@@ -6,13 +6,15 @@ public class Livro {
 	private double valor;
 	private String isbn;
 	private Autor autor;
+	private boolean impresso;	
 
 	
 	public Livro(Autor autor) {
 		this.autor = autor;
+		this.isbn = "000-00-00000-00-0";
+		this.impresso = true;
 	}
 	
-
 	void mostrarDetalhes() {
 		
 		System.out.println("Mostrando detalhes do livro ");
@@ -32,9 +34,9 @@ public class Livro {
 		if (porcentagem > 0.3) {
 			return false;
 		}
-		this.valor -= this.valor * porcentagem;
-		return true;
-		}
+			this.valor -= this.valor * porcentagem;
+			return true;
+	}
 	
 	public String getNome() {
 		return nome;
