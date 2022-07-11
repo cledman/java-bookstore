@@ -1,5 +1,5 @@
 
-public class Livro {
+public abstract class Livro {
 	
 	private String nome;
 	private String descricao;
@@ -11,8 +11,7 @@ public class Livro {
 	
 	public Livro(Autor autor) {
 		this.autor = autor;
-		this.isbn = "000-00-00000-00-0";
-		this.impresso = true;
+		this.isbn = "000-00-00000-00-0";		
 	}
 	
 	void mostrarDetalhes() {
@@ -30,13 +29,7 @@ public class Livro {
 		}
 	}
 	
-	public boolean aplicaDescontoDe(double porcentagem) {
-		if (porcentagem > 0.3) {
-			return false;
-		}
-			this.valor -= this.valor * porcentagem;
-			return true;
-	}
+	public abstract boolean aplicaDescontoDe(double porcentagem);
 	
 	public String getNome() {
 		return nome;
