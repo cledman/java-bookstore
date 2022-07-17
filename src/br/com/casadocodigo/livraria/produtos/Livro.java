@@ -1,23 +1,26 @@
 package br.com.casadocodigo.livraria.produtos;
+
 import br.com.casadocodigo.livraria.Autor;
 
-public abstract class Livro implements Produto{
-	
+public abstract class Livro implements Produto {
+
 	private String nome;
 	private String descricao;
 	private double valor;
 	private String isbn;
 	private Autor autor;
-	private boolean impresso;	
+	private boolean impresso;
 
-	
 	public Livro(Autor autor) {
+		if (autor == null) {
+			throw new RuntimeException("O Autor do Livro não pode ser nulo");
+		}
 		this.autor = autor;
-		this.isbn = "000-00-00000-00-0";		
+		this.isbn = "000-00-00000-00-0";
 	}
-	
+
 	public void mostrarDetalhes() {
-		
+
 		System.out.println("Mostrando detalhes do livro ");
 		System.out.println("Nome: " + nome);
 		System.out.println("Descrição: " + descricao);
@@ -25,13 +28,12 @@ public abstract class Livro implements Produto{
 		System.out.println("ISBN: " + isbn);
 		autor.mostrarDetalhes();
 		System.out.println("--");
-		
+
 		if (this.temAutor()) {
 			autor.mostrarDetalhes();
 		}
 	}
 
-	
 	public String getNome() {
 		return nome;
 	}
@@ -72,14 +74,14 @@ public abstract class Livro implements Produto{
 		this.autor = autor;
 	}
 
-	boolean temAutor(){
+	boolean temAutor() {
 		return this.autor != null;
 	}
-	
+
 	void adicionaValor(double valor) {
 		this.valor = valor;
 	}
-	
+
 	double retornaValor() {
 		return this.valor;
 	}
